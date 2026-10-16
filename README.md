@@ -24,13 +24,12 @@ Landing page de uma página só para um portal on-line voltado a profissionais d
 - **Livros e atlas de bolso**: manuais de acupuntura chinesa e Acupuntura Coreana Passo a Passo, com características de cada obra.
 - **Sobre a empresa** e **Contato** (botões de WhatsApp, Instagram e Facebook).
 
-Os botões de ação (Contratar, Acessar Link, Saiba Mais, redes sociais) ainda não têm destino definido no código.
-
 ## Detalhes de implementação
 
 - **Página montada por partials**: `index.blade.php` só inclui `head`, `header` e as seções de `resources/views/partials/`, o que mantém cada bloco isolado e fácil de editar.
 - **Navegação ativa por scroll**: o componente Alpine `sectionSpy` usa `IntersectionObserver` (só no desktop) para destacar o item do menu da seção visível; as âncoras `atlas`, `programs` e `books` são agrupadas no item "Produtos".
 - **Menu mobile com store global**: o estado de abertura fica em `Alpine.store('menu')`, com painel lateral, backdrop e accordion para os produtos.
+- **Botões configuráveis por `.env`**: os destinos dos botões vêm de `config/landing.php`, e a classe `App\Support\Landing` (compartilhada com as views como `$landing`) monta cada link. Os botões "Contratar" e os dos livros abrem o WhatsApp com uma mensagem que já cita o produto e o plano do card.
 - **Tema com tokens do Tailwind 4**: cores da marca definidas em `@theme` no `app.css`, e as classes `.light-bg` e `.dark-bg` aplicam um gradiente sobre a textura de fundo recebida pela variável `--bg-image`.
 
 ## Como rodar
@@ -47,11 +46,36 @@ php artisan serve
 
 As migrations são as padrão do Laravel (users, cache e jobs). Elas são necessárias porque sessão, cache e fila usam o driver `database`.
 
+Para gerar os assets de produção, use `npm run build` no lugar de `npm run dev`.
+
+## Configuração dos botões
+
+Os links de contato e de acesso ficam no `.env`:
+
+| Variável | Uso |
+| --- | --- |
+| `LANDING_WHATSAPP` | Número com DDI e DDD (ex.: `5563999999999`). Qualquer caractere que não seja dígito é ignorado. |
+| `LANDING_INSTAGRAM_URL` | URL completa do perfil no Instagram. |
+| `LANDING_FACEBOOK_URL` | URL completa da página no Facebook. |
+| `LANDING_PORTAL_URL` | Destino dos botões "Acessar Link" (portal ou área de acesso). |
+| `LANDING_VIDEOS_URL` | Destino dos botões "Acessar Vídeo". |
+
+Quando um valor fica vazio, a página continua sem links quebrados:
+
+- "Contratar" e os botões dos livros levam à seção de contato se não houver WhatsApp.
+- "Acessar Link" e "Acessar Vídeo" usam o WhatsApp como alternativa e, sem ele, a seção de contato.
+- Na seção de contato, cada card (WhatsApp, redes sociais) só aparece se o canal estiver configurado.
+
+Depois de alterar o `.env` em produção, rode `php artisan config:cache` de novo.
+
 ## Estrutura
 
 ```
 app/Http/Controllers/
   HomeController.php     # retorna a view index
+app/Support/
+  Landing.php            # monta os links dos botões a partir da config
+config/landing.php       # WhatsApp, redes sociais, portal e vídeos (LANDING_*)
 resources/
   css/app.css            # Tailwind, tokens de cor e fundos texturizados
   js/app.js              # stores e componentes Alpine (menu, nav, spy, carrossel)
