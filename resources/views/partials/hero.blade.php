@@ -3,7 +3,7 @@
 
         {{-- Imagem de Fundo --}}
         <div class="absolute inset-0 w-full h-full z-0 animate-fade-up animate-once animate-duration-[600ms] animate-delay-[50ms] animate-ease-in animate-normal animate-fill-forwards">
-            <img src="{{ asset('img/Fundo.png') }}"
+            <img src="{{ asset('img/fundo.png') }}"
                 class="w-full h-full object-cover object-center brightness-90 "
                 alt="Background Bambu">
         </div>
