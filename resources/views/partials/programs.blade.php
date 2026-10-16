@@ -110,9 +110,9 @@
 
                     {{-- Botão Acessar Link --}}
                     <div class="mt-8 flex justify-center md:justify-end">
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
+                        <a {{ $landing->attrs($landing->portal('Olá! Tenho interesse no Software_CAD4.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -225,9 +225,9 @@
 
                     {{-- Botão Acessar Link --}}
                     <div class="mt-8 flex justify-center md:justify-end">
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
+                        <a {{ $landing->attrs($landing->portal('Olá! Tenho interesse no Software_HAND4.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -332,12 +332,12 @@
 
                     {{-- Botões: Acessar Vídeo e Acessar Link --}}
                     <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center md:justify-end">
-                        <button class="bg-[#A3C847] hover:bg-[#96b03a] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
+                        <a {{ $landing->attrs($landing->videos('Olá! Gostaria de ver o vídeo do Software_PET.')) }} class="inline-block text-center bg-[#A3C847] hover:bg-[#96b03a] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
                             Acessar Vídeo
-                        </button>
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
+                        </a>
+                        <a {{ $landing->attrs($landing->portal('Olá! Tenho interesse no Software_PET.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
 
@@ -455,12 +455,12 @@
 
                     {{-- Botões: Acessar Vídeo e Acessar Link --}}
                     <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center md:justify-end">
-                        <button class="bg-[#A3C847] hover:bg-[#96b03a] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
+                        <a {{ $landing->attrs($landing->videos('Olá! Gostaria de ver o vídeo do Software_Aurículo.')) }} class="inline-block text-center bg-[#A3C847] hover:bg-[#96b03a] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
                             Acessar Vídeo
-                        </button>
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
+                        </a>
+                        <a {{ $landing->attrs($landing->portal('Olá! Tenho interesse no Software_Aurículo.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-8 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-base">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

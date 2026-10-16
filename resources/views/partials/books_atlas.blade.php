@@ -67,9 +67,9 @@
                         </div>
 
                         {{-- Botão Acessar Link --}}
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+                        <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no livro de bolso Acupuntura Chinesa, Manual Prático de Acupuntura 11ª edição.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -138,9 +138,9 @@
                         </div>
 
                         {{-- Botão Acessar Link --}}
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+                        <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no livro de bolso Acupuntura Chinesa, Manual Prático de Acupuntura 11ª edição.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -208,9 +208,9 @@
                         </div>
 
                         {{-- Botão Acessar Link --}}
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+                        <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no livro de bolso Acupuntura Chinesa, Manual Prático de Acupuntura 11ª edição.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -363,9 +363,9 @@
                         </div>
 
                         {{-- Botão Acessar Link --}}
-                        <button class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
+                        <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no livro de bolso Acupuntura Coreana Passo a Passo.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold px-12 py-3 rounded shadow-lg transition-transform transform hover:scale-105 text-lg w-full md:w-auto">
                             Acessar Link
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

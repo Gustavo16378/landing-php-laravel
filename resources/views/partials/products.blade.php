@@ -78,10 +78,10 @@
                             Acesso completo<br>ao conteúdo por<br>180 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura Sistêmica, plano de 6 meses.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -100,10 +100,10 @@
                             Acesso completo<br>ao conteúdo por<br>365 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura Sistêmica, plano de 1 ano.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -122,10 +122,10 @@
                             Acesso completo ao<br>conteúdo e ao<br>Software_MTC<br> por 365 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura Sistêmica, plano de 1 ano + Software_MTC.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -204,10 +204,10 @@
                             Acesso completo<br>ao conteúdo por<br>180 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura para Cães, plano de 6 meses.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -226,10 +226,10 @@
                             Acesso completo<br>ao conteúdo por<br>365 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura para Cães, plano de 1 ano.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -305,10 +305,10 @@
                             Acesso completo<br>ao conteúdo por<br>180 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura para Gatos, plano de 6 meses.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
 
@@ -327,10 +327,10 @@
                             Acesso completo<br>ao conteúdo por<br>365 Dias!!!
                         </p>
                         <div class="text-center mt-6">
-                            <button class="bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
+                            <a {{ $landing->attrs($landing->purchase('Olá! Tenho interesse no Sistema On-line de Acupuntura para Gatos, plano de 1 ano.')) }} class="inline-block text-center bg-[#2BD885] hover:bg-[#25b870] text-[#1F3C35] font-bold py-2.5 px-10 rounded transition-transform transform hover:scale-105 text-sm uppercase tracking-wider w-full"
                                 style="box-shadow: 0px 0px 3px 2px rgba(20, 235, 129, 0.25);">
                                 Contratar
-                            </button>
+                            </a>
                         </div>
                     </div>
                 </div>

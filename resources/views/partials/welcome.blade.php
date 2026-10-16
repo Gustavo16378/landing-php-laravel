@@ -35,11 +35,11 @@
                 </p>
 
                 <div class="pl-6">
-                    <button
-                        class="bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold py-3 px-8 rounded
+                    <a href="#atlas"
+                        class="inline-block bg-[#2BD885] hover:bg-[#25b870] text-brand-dark font-bold py-3 px-8 rounded
                                shadow-lg transition-transform hover:scale-105 uppercase tracking-wider">
                         Saiba Mais
-                    </button>
+                    </a>
                 </div>
 
             </div>
@@ -52,7 +52,7 @@
                     class="relative w-full md:max-w-md md:h-[420px] aspect-[4/5]
                            rounded overflow-hidden shadow-2xl">
 
-                    <a href="#products" class="absolute inset-0 z-20"></a>
+                    <a href="#atlas" class="absolute inset-0 z-20" aria-label="Ver nossos produtos"></a>
 
                     {{-- Slides --}}
                     <img src="{{ asset('img/CachorroGato.png') }}"

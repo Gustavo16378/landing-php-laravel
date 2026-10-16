@@ -72,7 +72,7 @@
 
     {{-- Desktop Button --}}
     <div class="hidden md:block">
-        <a href="#contact" class="bg-brand-green text-brand-dark px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition shadow-sm text-sm">
+        <a {{ $landing->attrs($landing->whatsapp('Olá! Gostaria de mais informações sobre os sistemas de acupuntura.') ?? '#contact') }} class="bg-brand-green text-brand-dark px-6 py-2 rounded font-semibold hover:bg-opacity-90 transition shadow-sm text-sm">
             Contato WhatsApp
         </a>
     </div>
@@ -144,7 +144,7 @@
         Contato
     </a>
 
-    <a href="#contact" @click="$store.menu.fechar()" class="bg-brand-green text-brand-dark px-6 py-3 rounded font-semibold text-center mt-8">
+    <a {{ $landing->attrs($landing->whatsapp('Olá! Gostaria de mais informações sobre os sistemas de acupuntura.') ?? '#contact') }} @click="$store.menu.fechar()" class="bg-brand-green text-brand-dark px-6 py-3 rounded font-semibold text-center mt-8">
         Contato WhatsApp
     </a>
 </nav>
