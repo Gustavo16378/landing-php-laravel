@@ -5,11 +5,9 @@ Alpine.store('menu', {
   aberto: false,
   toggle() {
     this.aberto = !this.aberto;
-    console.log('Toggle!  Aberto:', this.aberto);
   },
   fechar() {
     this.aberto = false;
-    console.log('Fechado! ');
   }
 });
 
@@ -84,5 +82,3 @@ Alpine.data('simpleFadeCarousel', ({ interval = 5000, count = 3 } = {}) => ({
 
 window.Alpine = Alpine;
 Alpine.start();
-
-console.log('✅ Alpine carregado!  Store:', Alpine.store('menu'));

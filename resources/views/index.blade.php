@@ -1,26 +1,26 @@
-<! DOCTYPE html>
-    <html lang="pt-br">
+<!DOCTYPE html>
+<html lang="pt-BR">
 
-    @include('partials.head')
+@include('partials.head')
 
-    <body
-        x-data="sectionSpy()"
-        class="antialiased font-sans bg-black">
-        >
-        @include('partials.header')
+<body
+    x-data="sectionSpy()"
+    class="antialiased font-sans bg-black">
 
-        <main>
-            @include('partials.hero')
-            @include('partials.welcome')
-            @include('partials.products')
-            @include('partials.condition_of_use')
-            @include('partials.programs')
-            @include('partials.license_conditions')
-            @include('partials.books_atlas')
-            @include('partials.about_company')
-            @include('partials.contact')
-        </main>
+    @include('partials.header')
 
-    </body>
+    <main>
+        @include('partials.hero')
+        @include('partials.welcome')
+        @include('partials.products')
+        @include('partials.condition_of_use')
+        @include('partials.programs')
+        @include('partials.license_conditions')
+        @include('partials.books_atlas')
+        @include('partials.about_company')
+        @include('partials.contact')
+    </main>
 
-    </html>
+</body>
+
+</html>
