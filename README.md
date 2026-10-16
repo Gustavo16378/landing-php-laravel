@@ -1,59 +1,67 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Landing page de portal de acupuntura
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Landing page de uma página só para um portal on-line voltado a profissionais de acupuntura, que divulga sistemas on-line (humano, cães e gatos), programas para computador e livros de bolso. O conteúdo é estático, renderizado em Blade a partir de uma única rota.
 
-## About Laravel
+## Stack
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+| Peça | Escolha |
+| --- | --- |
+| Backend | PHP 8.2+ com Laravel 12 |
+| Templates | Blade, com a página dividida em partials |
+| Estilo | Tailwind CSS 4 (via `@tailwindcss/vite`) e `tailwindcss-animated` |
+| Interatividade | Alpine.js 3 |
+| Build | Vite 7 com `laravel-vite-plugin` |
+| Banco | SQLite (padrão do `.env.example`), usado só por sessão, cache e fila |
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## Seções
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **Hero**: chamada "O Futuro da Acupuntura" sobre imagem de fundo.
+- **Boas-vindas**: apresentação do portal e carrossel com três slides (Acupuntura Veterinária, Acupuntura Sistêmica, Sistema Online).
+- **Produtos**: Acupuntura Sistêmica Online, Acupuntura para Cães e Acupuntura para Gatos, cada um com lista de conteúdos e cards de planos (6 meses, 1 ano e, no sistêmico, 1 ano + Software_MTC).
+- **Condições de uso**: regras de acesso ao sistema on-line, suporte técnico e "como funciona".
+- **Programas para computador**: Software_CAD4, Software_HAND4, Software_PET e Software_Aurículo.
+- **Requisitos e licenças**: requisitos mínimos, instalação, suporte e regras da licença gratuita dos programas.
+- **Livros e atlas de bolso**: manuais de acupuntura chinesa e Acupuntura Coreana Passo a Passo, com características de cada obra.
+- **Sobre a empresa** e **Contato** (botões de WhatsApp, Instagram e Facebook).
 
-## Learning Laravel
+Os botões de ação (Contratar, Acessar Link, Saiba Mais, redes sociais) ainda não têm destino definido no código.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+## Detalhes de implementação
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- **Página montada por partials**: `index.blade.php` só inclui `head`, `header` e as seções de `resources/views/partials/`, o que mantém cada bloco isolado e fácil de editar.
+- **Navegação ativa por scroll**: o componente Alpine `sectionSpy` usa `IntersectionObserver` (só no desktop) para destacar o item do menu da seção visível; as âncoras `atlas`, `programs` e `books` são agrupadas no item "Produtos".
+- **Menu mobile com store global**: o estado de abertura fica em `Alpine.store('menu')`, com painel lateral, backdrop e accordion para os produtos.
+- **Tema com tokens do Tailwind 4**: cores da marca definidas em `@theme` no `app.css`, e as classes `.light-bg` e `.dark-bg` aplicam um gradiente sobre a textura de fundo recebida pela variável `--bg-image`.
 
-## Laravel Sponsors
+## Como rodar
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+composer install
+cp .env.example .env
+php artisan key:generate
+touch database/database.sqlite
+php artisan migrate
+npm install && npm run dev
+php artisan serve
+```
 
-### Premium Partners
+As migrations são as padrão do Laravel (users, cache e jobs). Elas são necessárias porque sessão, cache e fila usam o driver `database`.
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Estrutura
 
-## Contributing
+```
+app/Http/Controllers/
+  HomeController.php     # retorna a view index
+resources/
+  css/app.css            # Tailwind, tokens de cor e fundos texturizados
+  js/app.js              # stores e componentes Alpine (menu, nav, spy, carrossel)
+  views/
+    index.blade.php      # monta a página a partir das partials
+    partials/            # head, header e uma partial por seção
+public/img/              # imagens, ícones e texturas da página
+routes/web.php           # rota única GET / -> HomeController@index
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Autor
 
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Desenvolvido por [Gustavo Barbosa Lima](https://gustavodev.dev).
